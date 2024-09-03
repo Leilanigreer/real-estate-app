@@ -7,7 +7,7 @@ class HomesController < ApplicationController
 
   def show
     # render json: {message: "hello"}
-    @home = Home.find_by(id: 2)
+    @home = Home.find_by(id: params[:id])
     render template: "homes/show"
   end
 end
